@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(120, 2, 6), rgb(6, 17, 97));
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+}
+
+form {
+    padding: 50px;
+    font-size: 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form-box {
+    margin-bottom: 15px;
+}
+
+.form-box label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+}
+
+.form-box.error input {
+    border: 1px solid rgb(120, 2, 6);
+    background-color: rgba(120, 2, 6, .1);
+}
+
+.form-box .error-txt {
+    font-size: 14px;
+    margin: 5px 0 0 10px;
+    color: rgb(120, 2, 6);
+    visibility: hidden;
+}
+
+.form-box.error .error-txt {
+    visibility: visible;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send,
+.clear,
+.close {
+    display: block;
+    padding: 10px 0;
+    margin-left: 10px;
+    width: 130px;
+    font-size: 18px;
+    background-color: rgb(6, 17, 97);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send:hover,
+.clear:hover,
+.close:hover {
+    background-color: rgba(6, 17, 97, 0.9);
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #000;
+    transition: top .5s;
+}
+
+.popup p {
+    font-size: 28px;
+}
+
+.popup .close {
+    margin-top: 20px;
+}
+
+.show-popup {
+    top: 50%;
+}
